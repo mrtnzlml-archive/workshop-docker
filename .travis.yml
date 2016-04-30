@@ -4,7 +4,7 @@ php:
   - 7.0
 
 before_script:
-  - openssl aes-256-cbc -K $encrypted_feee69c176cc_key -iv $encrypted_feee69c176cc_iv -in id_dsa.enc -out ~\/.ssh/id_dsa -d
+  - openssl aes-256-cbc -K $encrypted_feee69c176cc_key -iv $encrypted_feee69c176cc_iv -in id_dsa.enc -out id_dsa -d
   - composer selfupdate --no-progress
   - travis_retry composer install --prefer-dist
 
