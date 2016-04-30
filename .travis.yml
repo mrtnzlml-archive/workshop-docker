@@ -11,5 +11,16 @@ before_script:
 script:
   - vendor/bin/tester tests
 
+deploy:
+  provider: script
+  script: ./deploy.sh
+  on:
+    branch: master
+    repo: mrtnzlml/workshop-docker
+
+after_success:
+  - chmod 600 id_dsa
+  - mv id_dsa ~/.ssh/id_dsa
+
 notifications:
   email: false
