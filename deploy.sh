@@ -2,6 +2,7 @@
 
 BUILD_NAME=build-$(date +"%Y-%m-%d-%y-%H:%M.%N")
 
+touch app/config/config.local.neon
 composer install
 
 mkdir $BUILD_NAME
