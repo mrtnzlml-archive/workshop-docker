@@ -2,6 +2,8 @@
 
 BUILD_NAME=build-$(date +"%Y-%m-%d-%y-%H:%M.%N")
 
+composer install
+
 mkdir $BUILD_NAME
 mv * $BUILD_NAME
 tar -czf build.tgz $BUILD_NAME
